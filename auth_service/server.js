@@ -1,4 +1,5 @@
 import express from 'express'
+import 'dotenv/config'
 import {initDatabase} from "./database/database.js"
 
 import apiRoutes from "./routes/api.js"
