@@ -7,7 +7,7 @@ let pool;
 export async function initDatabase() {
     pool = await new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } })
     await pool.query(`
-        CREATE TABLE users(
+        CREATE TABLE IF NOT EXISTS users(
             id SERIAL PRIMARY KEY,
             login TEXT UNIQUE NOT HULL,
             password TEXT NOT NULL,
