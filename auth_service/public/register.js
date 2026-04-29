@@ -14,12 +14,13 @@ async function login(){
         window.location.href ="/dashboard";
     }
     if (data.status === "error"){
-        window.location.href ="/error"
+        const msg = 'Логин или пароль неверен'
+        showMassage(msg)
     }
 
 }
 
-async function password() {
+async function register() {
     const password = document.getElementById("password").value;
     const login = document.getElementById("login").value;
 
@@ -34,7 +35,14 @@ async function password() {
       window.location.href = "/dashboard";
     }
     if (data.status === "error") {
-      window.location.href = "/error";
+        const msg = 'Лоштн или пароль неаерен'
+        showMassage(msg)
+      
     }
+}
+
+function showMassage(message){
+   const div = document.getElementById('container-msg')
+   div.innerHTML = `<p> ${message}</p>`
 
 }
