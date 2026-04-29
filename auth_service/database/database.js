@@ -1,4 +1,5 @@
 import pg from 'pg';
+import 'dotenv/config'
 const { Pool } = pg
 
 
@@ -9,9 +10,9 @@ export async function initDatabase() {
     await pool.query(`
         CREATE TABLE IF NOT EXISTS users(
             id SERIAL PRIMARY KEY,
-            login TEXT UNIQUE NOT HULL,
+            login TEXT UNIQUE NOT NULL,
             password TEXT NOT NULL,
-            created_at CURRENT_TIMESTAMP,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
         `)
     return pool;
