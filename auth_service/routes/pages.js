@@ -11,9 +11,6 @@ router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, "../public", "index.html"))
 })
 
-router.get('/error', (req, res) => {
-  res.sendFile(path.join(__dirname, "../public", "404.html"))
-})
 
 router.get('/dashboard', (req, res) => {
   res.sendFile(path.join(__dirname, "../public", "dashboard.html"))
