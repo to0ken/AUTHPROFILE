@@ -1,21 +1,25 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DASHBOARD</title>
-    <style>
-        body{
-            background: rgb(143, 143, 143);
-        }
-    </style>
-</head>
+
 <body>
-    <button onClick="exit()" id ="logout-btn">EXIT</button>
-    <script>
-        function exit(){
-            window.location.href="/index.html"
-        }
-    </script>
-    
+    </head>
+    <div id="conteiner-dashboard">
+        <div id="user-info"></div>
+        <div id="profile-form">
+            <input type="text" id="full_name" placeholder="FULL NAME">
+            <input type="text" id="bio" placeholder="INFO">
+            <input type="email" id="email" placeholder="EMAIL">
+            <button id ="register-btn" >SAVE PROFIL</button>
+        </div>
+    </div>
+    <button onClick="exit()" id="logout-btn">EXIT</button>
+    <script src="/dashboard.js"></script>
 </body>
+</head>
+
+
 </html>
