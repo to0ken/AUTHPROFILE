@@ -10,7 +10,10 @@ async function login(){
     })
 
     const data = await resp.json();
+
     if (data.status === "success"){
+        localStorage.setItem('user_id', data.user_id)
+        localStorage.setItem('user_name', data.user_name)
         window.location.href ="/dashboard";
     }
     if (data.status === "error"){
