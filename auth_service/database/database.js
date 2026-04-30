@@ -5,6 +5,8 @@ const { Pool } = pg
 
 let pool;
 
+
+
 export async function initDatabase() {
     pool = await new Pool({ connectionString: process.env.DATABASE_URL, ssl: { rejectUnauthorized: false } })
     await pool.query(`
